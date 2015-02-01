@@ -1,0 +1,23 @@
+{
+  "name": "murrion/php_jobs_on_reddit",
+  "description": "This is a small application to look for new PHP related opportunities on Reddit's /forhire subreddit and email them to me.",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Gordon Murray",
+      "email": "projects@murrion.com"
+    }
+  ],
+  "require": {
+    "silex/silex": "v1.2.3",
+    "swiftmailer/swiftmailer": "~5.3",
+    "twig/twig": "~1.18",
+    "symfony/yaml": "2.0.7"
+  },
+  "autoload": {
+    "psr-0": {
+      "Opportunity\\": "src/"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<h1>Opportunity logs</h1>
+
+<table border="1">
+    {% for key,value in logs %}
+        <tr>
+            <td>{{ value.created }}</td>
+            <td>{{ value.author }}</td>
+            <td>{{ value.title }} </td>
+            <td><a href="{{ value.url }}">{{ value.url }}</a></td>
+        </tr>
+    {% endfor %}
+</table>
