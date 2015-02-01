@@ -62,7 +62,7 @@ class Opportunity
                 $message = \Swift_Message::newInstance()
                     ->setSubject('PHP Opportunity: ' . $opportunity['title'])
                     ->setContentType('text/html')
-                    ->setFrom(array($this->$sender_email_address))
+                    ->setFrom(array($this->sender_email_address))
                     ->setTo(array($this->recipient_email_address))
                     ->setBody($app['twig']->render('email_notification.twig', array(
                         'title' => $opportunity['title'],
