@@ -12,9 +12,11 @@ The application logs opportunities to a file in /logs so that it doesn't send th
 
 3. Update the email.settings.yml file with your own email host, port, username and password so the application can send emails to you.
 
-4. Schedule the application to run often
+4. Update /src/opportunity.php with the email addresses to send and receive from
 
-5. (Optional) You can change some keywords to watch out for in the $search_keywords variable in the /src/opportunity.php file
+5. Schedule the application to run often
+
+6. (Optional) You can change some keywords to watch out for in the $search_keywords variable in the /src/opportunity.php file
 
 #### Example Cron usage:
 ```

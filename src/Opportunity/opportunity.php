@@ -6,6 +6,10 @@ namespace Opportunity;
 class Opportunity
 {
 
+    private $sender_email_address = 'noreply@domain.com';
+
+    private $recipient_email_address = 'me@domain.com';
+
     private $log_file = './logs/logged_opportunities.txt';
 
     private $search_keywords = 'php,api,codeigniter,laravel,silex,developer,webdeveloper';
@@ -58,8 +62,8 @@ class Opportunity
                 $message = \Swift_Message::newInstance()
                     ->setSubject('PHP Opportunity: ' . $opportunity['title'])
                     ->setContentType('text/html')
-                    ->setFrom(array('noreply@murrion.com'))// replace with your own
-                    ->setTo(array('gordon@murrion.com'))// replace with email recipient
+                    ->setFrom(array($this->$sender_email_address))
+                    ->setTo(array($this->recipient_email_address))
                     ->setBody($app['twig']->render('email_notification.twig', array(
                         'title' => $opportunity['title'],
                         'content' => $opportunity['content'],
