@@ -85,6 +85,8 @@ class Opportunity
      */
     public function retrieve_new_opportunities()
     {
+        $opportunities = array();
+
         $search_keywords = explode(",", $this->search_keywords);
 
         $reddit_forhire_json = file_get_contents('http://www.reddit.com/r/forhire/new/.json');
